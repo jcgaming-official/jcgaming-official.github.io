@@ -1,76 +1,17 @@
-<h2 align="center">
-  Portfolio Website - v2.0<br/>
-  <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a>
-</h2>
-<div align="center">
-  <img alt="Demo" src="./Images/readme-img1.png" />
-</div>
+### Developer Setup
 
-<br/>
+This repo features a Visual Studio Code dev container which provides the developer with a containerized environment and automates build, deploy, and local development to maximize productivity. 
 
-<center>
+Clone this repo, then `cd` into it and run `code .` or Open Visual Studio Code and Navigate to this folder. Click on the prompt for opening the folder in a dev container. That's it! Initial build will take care of installing all dependencies and the app should be automatically deployed to localhost on subsequent launches. 
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) &nbsp;
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com) &nbsp;
-![GitHub Repo stars](https://img.shields.io/github/stars/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge) &nbsp;
-![GitHub forks](https://img.shields.io/github/forks/soumyajit4419/Portfolio?color=red&logo=github&style=for-the-badge)
+### Adding your own content
 
-</center>
+The only sources of content are the Home and About pages, the projects on the project page, and the resume on the resume page.
 
-<h3 align="center">
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Report Bug</a> &nbsp; &nbsp;
-    🔹
-    <a href="https://github.com/soumyajit4419/Portfolio/issues">Request Feature</a>
-</h3>
+To change the content on the Home and About pages, make changes directly to the Home and About components. You can add/modify/remove cards on the project page by editing `src/Assets/Data/projectList.js`: the `imgPath` field must be the filename of an image file in `src/Assets/Images/Projects`. To change the resume, you will need to change `src/Assets/Data/resume.pdf` (must be a PDF) and change the URL in `src/Components/Resume/ResumeRender.js`, the latter for which, in the interest of simplicity, I recommend a similar github raw path.
 
-## TL;DR
+### Pushing to Github Pages
 
-You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to [Soumyajit4419](https://github.com/soumyajit4419/Portfolio). Thanks!
+You can push your changes to github pages using `npm run deploy`.
 
-## Built With
-
-My personal portfolio <a href="https://soumyajit.vercel.app/" target="_blank">soumyajit.tech</a> which features some of my github projects as well as my resume and technical skills.<br/>
-
-This project was built using these technologies.
-
-- React.js
-- Node.js
-- Express.js
-- CSS3
-- VsCode
-- Vercel
-
-## Features
-
-**📖 Multi-Page Layout**
-
-**🎨 Styled with React-Bootstrap and Css with easy to customize colors**
-
-**📱 Fully Responsive**
-
-## Getting Started
-
-Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
-
-## 🛠 Installation and Setup Instructions
-
-1. Installation: `npm install`
-
-2. In the project directory, you can run: `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-The page will reload if you make edits.
-
-## Usage Instructions
-
-Open the project folder and Navigate to `/src/components/`. <br/>
-You will find all the components used and you can edit your information accordingly.
-
-### Show your support
-
-Give a ⭐ if you like this website!
-
-<a href="https://www.buymeacoffee.com/soumyajit4419" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" height= "60px" width= "217px" ></a>
+Please follow the [instructions](https://create-react-app.dev/docs/deployment/#github-pages) on serving react apps with github pages!
