@@ -550,31 +550,70 @@ button:focus {
   color: white !important;
 }
 
-.tech-icons {
-  font-size: 4.5em !important;
-  margin: 15px !important;
+.tech-icons-wrapper {
   padding: 10px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  height: 85px !important; /* Reserve grid cell height */
+}
+
+.tech-icons {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  width: 100% !important;
+  max-width: 220px !important;
+  height: 65px !important;
+  font-size: 1.8em !important;
+  padding: 8px 16px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-  border-radius: 5px !important;
-  display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  border: 1.7px solid rgba(200, 137, 230, 0.3) !important;
+  border-radius: 50px !important; /* Fully rounded pill shape! */
+  background-color: rgba(17, 10, 30, 0.45) !important;
+  box-shadow: 0 4px 12px rgba(89, 4, 168, 0.15) !important;
+  transition: all 0.2s ease-in-out !important;
+  color: white !important;
   overflow: hidden !important;
-  transition: all 0.4s ease 0s !important;
+  position: relative !important;
+  cursor: pointer !important;
 }
 
-@media (max-width: 767px) {
-  .tech-icons {
-    margin: 10px !important;
-  }
+.tech-icons:hover,
+.tech-icons:active {
+  position: absolute !important;
+  width: max-content !important;
+  min-width: calc(100% - 20px) !important;
+  max-width: 280px !important;
+  z-index: 99 !important;
+  transform: scale(1.08) !important;
+  border: 1.7px solid rgba(197, 115, 230, 0.8) !important;
+  box-shadow: 0 8px 25px rgba(197, 115, 230, 0.5) !important;
+  background-color: rgba(30, 15, 50, 0.95) !important;
 }
 
-.tech-icons:hover {
-  transform: scale(1.05) !important;
+.tech-icons svg {
+  transition: all 0.3s ease 0s !important;
+  flex-shrink: 0 !important;
+}
+
+.tech-name {
+  font-size: 0.55em !important; /* Scale text relative to parent font-size */
+  font-weight: 600 !important;
+  color: #fff !important;
+  font-family: inherit !important;
+  letter-spacing: 0.5px !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+}
+
+.tech-icons:hover .tech-name,
+.tech-icons:active .tech-name {
+  overflow: visible !important;
+  text-overflow: clip !important;
 }
 .tech-icon-images {
   padding: 20px !important;
