@@ -30,7 +30,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://facebook.com/jcquieta.158"
+                href="https://www.facebook.com/profile.php?id=61590193667451"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
